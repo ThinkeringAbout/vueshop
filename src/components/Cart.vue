@@ -7,7 +7,7 @@
       Корзина пуста... =(
     </h2>
     <div v-else>
-      <h2 class="w-1/3 mx-auto text-3xl text-center mt-3 font-mono font-bold text-cyan-300">
+      <h2 class="w-2/3 md:w-1/3 mx-auto text-3xl text-center mt-3 font-mono font-bold text-cyan-300">
         Проверьте Ваш заказ
       </h2>
       <TransitionGroup name="list">
@@ -16,7 +16,7 @@
           :key="item.name"
           class="flex justify-start flex-row"
         >
-          <div class="w-1/3 mx-auto flex mt-3 items-right">
+          <div class="w-2/3 md:w-1/3 mx-auto flex mt-3 items-right">
             <div
               class="bg-white rounded-lg px-2 border border-black flex justify-between w-full font-mono font-bold text-black"
             >
@@ -32,10 +32,10 @@
           </div>
         </div>
       </TransitionGroup>
-      <p class="w-1/3 mx-auto text-2xl text-right mt-3 font-mono font-bold text-cyan-300">
+      <p class="w-2/3 md:w-1/3 mx-auto text-2xl text-right mt-3 font-mono font-bold text-cyan-300">
         Итог: {{ store.getCartPrice }} ₽
       </p>
-      <Form @submit="submitOrder" class="flex flex-col w-1/3 mx-auto">
+      <Form @submit="submitOrder" class="flex flex-col w-2/3 sm:w-1/3 mx-auto">
         <label for="city" class="font-mono font-bold text-cyan-300">Город:</label>
         <Field
           v-model="this.address.city"
