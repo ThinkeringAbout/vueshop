@@ -16,7 +16,7 @@ export const useMealsStore = defineStore("meals", {
     },
     getOrders() {
       axios
-        .get("http://localhost:3000/orders")
+        .get("https://shopbackend.onrender.com/orders")
         .then((res) => {
           this.orders = res.data;
         })
@@ -26,7 +26,7 @@ export const useMealsStore = defineStore("meals", {
     },
     getMeals() {
       axios
-        .get("http://localhost:3000/meals")
+        .get("https://shopbackend.onrender.com/meals")
         .then((res) => {
           this.meals = res.data;
           setTimeout(() => {

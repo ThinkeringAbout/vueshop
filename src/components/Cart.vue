@@ -157,7 +157,7 @@ export default {
         completed: false,
       };
       axios
-        .post("http://localhost:3000/order", order)
+        .post("https://shopbackend.onrender.com/order", order)
         .then((res) => {
           console.log("Res:", res);
         })

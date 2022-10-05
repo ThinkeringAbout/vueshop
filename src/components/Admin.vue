@@ -192,7 +192,7 @@ export default {
         completed: true
       }
       axios
-        .post("http://localhost:3000/updateorder", body)
+        .post("https://shopbackend.onrender.com/updateorder", body)
         .then((res) => {
           console.log("Res:", res);
           this.store.orders[index].completed = true
@@ -230,7 +230,7 @@ export default {
         imgUrl: this.newMeal.imgUrl,
       };
       axios
-        .post("http://localhost:3000/addmeal", newDish)
+        .post("https://shopbackend.onrender.com/addmeal", newDish)
         .then((res) => {
           console.log("Res:", res);
         })
