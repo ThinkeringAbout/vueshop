@@ -21,6 +21,11 @@
           to="/about"
           >О компании</router-link
         >
+        <router-link
+          class="transition ease-in-out duration-200 tracking-wider hover:text-cyan-900 antialiased text-xl font-oswald text-cyan-700 mr-4"
+          to="/admin"
+          >А</router-link
+        >
       </div>
       <div class="container-fluid">
         <router-link to="/cart">
