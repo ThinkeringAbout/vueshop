@@ -74,6 +74,7 @@
               value="card"
               id="card"
               v-model="this.paymentMethod"
+              class= "accent-cyan-300"
             />
             <label for="card" class="font-mono font-bold text-cyan-300 mx-1">Картой</label>
           </div>
