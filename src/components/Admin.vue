@@ -78,11 +78,10 @@
     </Form>
     <div v-else class="h-full flex flex-col justify-center max-h-50 overflow-y-auto">
       <div v-for="(item, idx) in store.orders" :key="idx" class="flex p-2 flex-col mx-auto justify-start items-left border my-1 border-black bg-white w-2/3 h-30 min-h-20 ">
-        <p class="text-left">Заказ на сумму: <span class="text-mono font-bold">{{ item.fullprice }}</span></p>
-        <ul v-for="meal in item.food" class="text-red-500">
-          <li>Название: {{ meal.name }} x {{ meal.count }}</li>
-          <li>Итог: {{ meal.price * meal.count }}</li>
-          <li>Количество: {{ meal.count }}</li>
+        <p class="text-left">Заказ на сумму: <span class="text-mono font-bold">{{ item.fullprice }} ₽</span></p>
+        <ul v-for="meal in item.food" class="text-red-500 border border-black my-1">
+          <li>Блюдо: {{ meal.name }} x {{ meal.count }}</li>
+          <li>Итог: {{ meal.price * meal.count }} ₽</li>
 
         </ul>
         <p class="text-left">Оплата: {{ item.payment == 'cash' ? 'Наличные' : 'Картой' }}</p>
