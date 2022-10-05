@@ -35,7 +35,7 @@
       <p class="w-2/3 md:w-1/3 mx-auto text-2xl text-right mt-3 font-mono font-bold text-cyan-300">
         Итог: {{ store.getCartPrice }} ₽
       </p>
-      <Form @submit="submitOrder" class="flex flex-col w-2/3 sm:w-1/3 mx-auto">
+      <Form @submit="submitOrder" class="flex flex-col w-2/3 md:w-1/3 mx-auto">
         <label for="city" class="font-mono font-bold text-cyan-300">Город:</label>
         <Field
           v-model="this.address.city"
