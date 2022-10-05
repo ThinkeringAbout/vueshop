@@ -146,6 +146,7 @@ export default {
       this.store.deleteItemFromCart(name);
     },
     submitOrder() {
+      const orderPrice = this.store.getCartPrice()
       const order = {
         id: uid(),
         food: this.store.cart,
@@ -154,6 +155,7 @@ export default {
         building: this.address.building,
         payment: this.paymentMethod,
         comments: this.comments,
+        fullprice: orderPrice,
         completed: false,
       };
       axios
