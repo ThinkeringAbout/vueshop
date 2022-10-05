@@ -12,7 +12,7 @@
       <div v-for="item in store.meals" :key="item.name" class="flex m-2">
         <div class="rounded-lg shadow-lg bg-black max-w-sm">
           <img
-            class="rounded-t-lg h-3/5 w-full border-4 border-black"
+            class="rounded-t-lg max-h-3/5 w-full border-4 border-black"
             :src="item.imgUrl"
             alt="Sushi"
           />
