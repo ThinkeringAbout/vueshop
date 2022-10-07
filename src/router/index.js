@@ -9,9 +9,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      redirect: (to) => {
-        return { path: "/menu" };
-      },
+      component: About,
     },
     {
       path: "/menu",
@@ -32,12 +30,6 @@ const router = createRouter({
       path: "/admin",
       name: "admin",
       component: Admin,
-    },
-    {
-      path: "/:pathMatch(.*)*",
-      redirect: (to) => {
-        return { path: "/about" };
-      },
     },
   ],
 });
