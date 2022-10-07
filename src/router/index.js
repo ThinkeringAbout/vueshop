@@ -1,15 +1,17 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Menu from "../components/Menu.vue";
 import About from "../components/About.vue";
 import Cart from "../components/Cart.vue";
 import Admin from "../components/Admin.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",
-      component: About,
+      redirect: (to) => {
+        return { path: "/menu" };
+      },
     },
     {
       path: "/menu",
@@ -32,8 +34,10 @@ const router = createRouter({
       component: Admin,
     },
     {
-      path: "/:pathMatch(.*)",
-      component: About,
+      path: "/:pathMatch(.*)*",
+      redirect: (to) => {
+        return { path: "/about" };
+      },
     },
   ],
 });
